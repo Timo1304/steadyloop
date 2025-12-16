@@ -77,7 +77,7 @@ Lead Engineer, SteadyLoop.
 *Building quiet tools for loud minds.*
 
 [<img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin">](https://www.linkedin.com/in/timothy-finomo-522bb1241/)
-[<img src="https://img.shields.io/badge/Product-View_Work-black?style=flat&logo=vercel">](https://steady-loop-v1.vercel.app/)
+[<img src="https://img.shields.io/badge/Product-black?style=flat&logo=vercel">](https://steady-loop-v1.vercel.app/)
 
 ## 📸 The "Quiet" UI System
 
