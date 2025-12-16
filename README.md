@@ -1,8 +1,12 @@
-# SteadyLoop ♾️
+<div align="center">
+  <img src="assets/icon-512.png" alt="SteadyLoop Logo" width="120" height="auto" />
+  <h1>SteadyLoop ♾️</h1>
+  <p>
+    <b>"A Flight Recorder for the Bipolar Brain."</b>
+  </p>
+</div>
 
-> **"A Flight Recorder for the Bipolar Brain."**
-
-**SteadyLoop** is a minimalist, privacy-first Progressive Web App (PWA) engineered strictly for the management of Bipolar Type 1 & 2. It prioritizes speed, clinical clarity, and zero-friction logging over social features or gamification.
+**SteadyLoop** is a **clinically-aligned**, privacy-first Progressive Web App (PWA) engineered specifically for **tracking stability** in Bipolar Type 1 & 2. It prioritizes **latency, data integrity, and zero-friction logging** over social features or gamification.
 
 [![Project Status](https://img.shields.io/badge/status-live_beta-success)](https://steady-loop-v1.vercel.app/)
 ![Tech Stack](https://img.shields.io/badge/stack-Next.js_16_|_Supabase_|_Tailwind-blue)
@@ -11,30 +15,27 @@
 
 ## 💡 The Philosophy (Zero Friction)
 
-Most mental health applications suffer from "feature bloat"—gamification, social feeds, and complex charts that create cognitive load during a crisis.
-
-SteadyLoop was built to solve a specific UX problem: **Latency.**
-The goal was to engineer a "Flight Recorder" that captures critical health data in under 5 seconds, ensuring adherence even in high-stress scenarios.
+Most mental health applications suffer from "feature bloat." SteadyLoop was built to solve a specific **UX Latency Problem**:
+The goal is to engineer a system that captures critical health data in **under 5 seconds**, ensuring adherence even in high-stress, mixed-state scenarios.
 
 ## ⚡ Core Architecture
 
 ### **1. The Clinical Scale**
-Refactored from arbitrary "star ratings" to a strict clinical integer scale to map medical reality:
-* `1` = Severe Depression
-* `3` = Stable Baseline
-* `5` = Mania
+Refactored from arbitrary "star ratings" to SteadyLoop implements a **Integer Scale** mapped directly to standard reporting metrics for Depression, Stability, and Mania. This ensures data is instantly readable by care providers.
 
-### **2. Visual Intelligence**
-Raw data is instantly transmuted into a **7-Day Trend Line**. The system uses gradient visualizations to signal velocity shifts towards Mania (Red) or Depression (Blue) relative to the stable baseline, allowing for rapid pattern recognition.
+### **2. Velocity Visualization**
+Raw data is processed into a **7-Day Trend Line**. The system analyzes entry velocity to visually highlight shifts away from baseline, aiding in personal pattern recognition.
 
 ### **3. The Smart Cabinet**
-A dynamic medication inventory system handling "Daily" vs "As Needed" (PRN) doses. Includes optimistic UI updates and "Undo" logic to prevent database pollution from accidental logs.
+A dynamic medication inventory system handling complex dosing schedules.
+* **The Tech:** Implements advanced **Latency Management** patterns to provide instant feedback on user interactions, decoupling UI responsiveness from network connection.
+* **The Safety:** Includes safeguard logic to prevent database pollution from accidental logs.
 
 ### **4. Native PWA**
-Configured with a robust `manifest.json` and iOS meta-tags. The application installs to the home screen with zero browser chrome, leveraging service workers for near-native performance.
+Configured for a strictly native feel. The application installs to the home screen with **standalone** display mode, leveraging Service Workers for offline-first resilience.
 
 ### **5. The Nuclear Option (Data Sovereignty)**
-Privacy is absolute. A hard-delete feature allows the user to wipe all associated rows from the database instantly.
+Privacy is a core tenet. A **Cascade Delete** feature allows the user to wipe their entire existence (Auth User + Database Rows) instantly. No soft deletes. No retention buckets.
 
 ## 🛠️ The Tech Stack
 
@@ -42,31 +43,35 @@ Built for reliability and speed on the Vercel Edge Network.
 
 | Layer | Technology |
 | :--- | :--- |
-| **Framework** | **Next.js 16** (App Router, Server Actions, React 19 RC) |
-| **Database** | **Supabase** (PostgreSQL + Row Level Security) |
+| **Framework** | **Next.js 16** (App Router, Server Actions) |
+| **Database** | **Supabase** (PostgreSQL + RLS) |
+| **Validation** | **Zod** (Strict runtime schema validation) |
 | **Styling** | **Tailwind CSS** + Shadcn UI (Dark Mode Default) |
-| **Visualization** | **Recharts** (Custom SVG plotting) |
+| **Visualization** | **Recharts**|
 | **Deployment** | **Vercel** (CI/CD Pipeline) |
 
 **Key Engineering Features:**
-* **Optimistic UI:** Interface updates instantly; database writes occur asynchronously.
-* **Zod Validation:** Strict runtime type-checking for all inputs.
-* **Server Actions:** Zero-API-route architecture for direct database mutations.
+* **Zero-API Architecture:** Direct, type-safe database mutations via Server Actions, removing the latency of traditional REST API layers.
+* **Global Timezone Resilience:** Custom client-side aggregation logic ensures data consistency across travel and timezones, preventing server-side date drift.
+* **Database-Level Isolation:** Strict Row Level Security (RLS) policies enforce total data sovereignty at the database engine level, ensuring users can never access rows they do not own.
 
 ## 🔒 License & IP
 
 **SteadyLoop is Proprietary Software.**
 
-* **The Code:** The source code is hosted in a private repository to protect the intellectual property and user safety logic.
-* **The Purpose:** This repository serves as the public documentation, issue tracker, and roadmap.
+* **The Code:** The source code is hosted in a private repository to protect the intellectual property and safety logic.
+* **The Purpose:** This public repository serves as the **Documentation, Issue Tracker, and Roadmap** for the community.
+
+
+**Disclaimer:** SteadyLoop is a data logging tool, not a medical device. It does not provide medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider.
 
 ## 🚀 Roadmap & Future Features
 **Current Status:** `v1.0 (Closed Beta)`
 
 **Phase 2 (In Development):**
-* [ ] **Clinical Export:** PDF/CSV generation for psychiatrist review.
-* [ ] **The Safety Net:** Automated server-side inactivity monitoring (Dead Man's Switch).
-* [ ] **Biometric Lock:** integrating WebAuthn for FaceID support.
+* [ ] **Clinical Reporting:** Standardized PDF/CSV generation for care provider review.
+* [ ] **Active Welfare Protocols:** Automated crisis intervention logic (The "Dead Man's Switch").
+* [ ] **Biometric Session Management:** WebAuthn integration for secure, low-friction access.
 
 ---
 
@@ -75,6 +80,7 @@ Built for reliability and speed on the Vercel Edge Network.
 **Timothy Finomo**
 Lead Engineer, SteadyLoop.
 *Building quiet tools for loud minds.*
+* **Copyright:** © 2025 Timothy Finomo. All Rights Reserved.
 
 [<img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin">](https://www.linkedin.com/in/timothy-finomo-522bb1241/)
 [<img src="https://img.shields.io/badge/Product-black?style=flat&logo=vercel">](https://steady-loop-v1.vercel.app/)
@@ -82,16 +88,18 @@ Lead Engineer, SteadyLoop.
 ## 📸 The "Quiet" UI System
 
 ### 🎥 Interaction Preview
+![App Demo](./assets/Demo.gif)
+
 ### ☀️ Light Mode
 | **Dashboard View** | **History List** |
 | :---: | :---: |
-|  |  |
-| **Settings** | **Mobile Menu** |
-|  |  |
+| <img src="assets/dashboard  light mode.png" width="400"> | <img src="assets/History light mode.png" width="400"> |
+| **Settings** | **Trends Analysis** |
+| <img src="assets/Settings light mode.png" width="400"> | <img src="assets/Trends light mode.png" width="400"> |
 
 ### 🌙 Dark Mode (Default)
 | **Dashboard View** | **History List** |
 | :---: | :---: |
-|  |  |
-| **Settings** | **Trends Analysis** |
-|  |  |
+| <img src="assets/dashboard darkmode.png" width="400"> | <img src="assets/History dark mode.png" width="400"> |
+| **Settings** | **Login Page** |
+| <img src="assets/settings darkmode.png" width="400"> | <img src="assets/Loginpage default.png" width="400"> |
