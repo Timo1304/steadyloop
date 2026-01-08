@@ -70,7 +70,7 @@ Built for reliability and speed on the Vercel Edge Network.
 
 **Phase 2 (In Development):**
 * [ ] **Clinical Reporting:** Standardized PDF/CSV generation for care provider review.
-* [ ] **Active Welfare Protocols:** Automated crisis intervention logic (The "Dead Man's Switch").
+* [ ] **Active Welfare Protocols:** Automated crisis intervention logic.
 * [ ] **Biometric Session Management:** WebAuthn integration for secure, low-friction access.
 
 ---
