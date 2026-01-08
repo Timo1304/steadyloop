@@ -78,7 +78,7 @@ Built for reliability and speed on the Vercel Edge Network.
 ### 👨‍💻 Author
 
 **Timothy Finomo**
-Lead Engineer, SteadyLoop.
+Solo Product Architect & Engineer, SteadyLoop.
 *Building quiet tools for loud minds.*
 * **Copyright:** © 2025 Timothy Finomo. All Rights Reserved.
 
